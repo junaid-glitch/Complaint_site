@@ -53,9 +53,6 @@ To deploy this project run
 ```
 
   
-# Complain website 📃️
-
-A website which is designed to listen the issues of the students, employess, workers of an institute.
 
 ## Contributing 🤝️
 
