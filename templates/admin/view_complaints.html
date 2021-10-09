@@ -1,0 +1,98 @@
+{%extends "admin/master.html"%}{%block body%}
+    <!-- Favicon icon -->
+
+    <!-- Datatable -->
+    <link href="{{url_for('static',filename='vendor/datatables/css/jquery.dataTables.min.css')}}" rel="stylesheet">
+    <!-- Custom Stylesheet -->
+    <link href="{{url_for('static',filename='css/style.css')}}" rel="stylesheet">
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+            <div class="container-fluid">
+                <div class="row page-titles mx-0">
+                    <div class="col-sm-6 p-md-0">
+                        <div class="welcome-text">
+                        </div>
+                    </div>
+                    <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="javascript:void(0)">Table</a></li>
+                            <li class="breadcrumb-item active"><a href="javascript:void(0)">Datatable</a></li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- row -->
+
+
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Complaints</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table id="example" class="display" style="min-width: 845px">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th>Subject</th>
+                                                <th>Against</th>
+                                                <th>From Program</th>
+                                                <th>From Session</th>
+                                                <th>Description</th>
+                                                <th>Read More</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>{% for c in comps%}
+                                                <td>{{loop.index}}</td>
+                                                <td>{{c.Complaints.subject}}</td>
+                                                <td>{{c.Complaints.against}}</td>
+                                                 <td>{{c.Programs.program}}</td>
+                                                <td>{{c.Sessions.session}}</td>
+                                                <td>{{c.Complaints.description}}</td>
+                                                <td><a class="btn btn-primary" href="/read_complaint/{{c.Complaints.id}}">VIEW</a></td>
+                                            </tr>{%endfor%}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+
+
+        <!--**********************************
+           Support ticket button start
+        ***********************************-->
+
+        <!--**********************************
+           Support ticket button end
+        ***********************************-->
+
+        
+    </div>
+    <!--**********************************
+        Main wrapper end
+    ***********************************-->
+
+    <!--**********************************
+        Scripts
+    ***********************************-->
+    <!-- Required vendors -->
+    <script src="{{url_for('static',filename='vendor/global/global.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/quixnav-init.js')}}"></script>
+    <script src="{{url_for('static',filename='js/custom.min.js')}}"></script>
+
+    <!-- Datatable -->
+    <script src="{{url_for('static',filename='vendor/datatables/js/jquery.dataTables.min.js')}}"></script>
+    <script src="{{url_for('static',filename='js/plugins-init/datatables.init.js')}}"></script>
+{%endblock%}

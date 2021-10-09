@@ -1,0 +1,33 @@
+{%extends "admin/master.html"%}{%block body%}
+
+             <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+            <div class="container-fluid">
+                <!-- row -->
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">SUBJECT: {{compl.Complaints.subject}}</h3>
+                            </div>
+                            <div class="card-body">
+                                <h6>AGAINST:&nbsp;<u>{{compl.Complaints.against.capitalize()}}</u> &nbsp;&nbsp;&nbsp; STUDENT SESSION:&nbsp;<u>{{compl.Sessions.session}}</u> &nbsp;&nbsp;&nbsp;STUDENT PROGRAM:&nbsp;<u>{{compl.Programs.program}}</u></h6><br>
+                                <h6>DATE SUBMITTED:&nbsp;<u>{{compl.Complaints.date}}</u> </h6><br><br>
+                                <p>
+                                    {{compl.Complaints.description |safe}}
+                                </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            </div>
+        </div>
+        <!--**********************************
+            Content body end
+{%endblock%}

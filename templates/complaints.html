@@ -1,0 +1,63 @@
+{%extends "master.html"%}{%block body%}
+
+           Content body start
+        ***********************************-->
+        <div class="content-body">
+            <div class="container-fluid">
+                <div class="row page-titles mx-0">
+                    <div class="col-sm-6 p-md-0">
+                        <div class="welcome-text">
+                            <h4>Hi, Student Name Here!</h4>
+                                              </div>
+                    </div>
+                    <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="javascript:void(0)">Complaints</a></li>
+                            <li class="breadcrumb-item active"><a href="javascript:void(0)">Student</a></li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12">
+                        <div class="card">
+                            <div class="card-header">
+                            <h4 class="card-title">My Complaints</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table student-data-table m-t-20">
+                                        <thead>
+                                            <tr>
+                                                <th>#</th>
+                                                <th class="col-3"> Subject</th>
+                                                <th>Against</th>
+                                                <th class="col-4">Details</th>
+                                                <th>Date</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>{% for c in mycomp%}
+                                                <td>{{loop.index}}</td>
+                                                <td>{{c.Complaints.subject}}</td>
+                                                <td>
+                                                  {{c.Complaints.against}}
+                                                </td>
+                                                <td>
+                                                  {{c.Complaints.description}}
+                                                </td>
+                                                <td>{{c.Complaints.date}}</td>
+                                            </tr>{%endfor%}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+{%endblock%}

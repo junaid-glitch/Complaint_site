@@ -1,0 +1,52 @@
+{%extends "admin/master.html"%}{%block body%}
+
+        <!--**********************************
+            Content body start
+        ***********************************-->
+        <div class="content-body">
+            <div class="container-fluid">
+                <div class="row page-titles mx-0">
+                    <div class="col-sm-6 p-md-0">
+                        <div class="welcome-text">
+                        </div>
+                    </div>
+                    <div class="col-sm-6 p-md-0 justify-content-sm-end mt-2 mt-sm-0 d-flex">
+                        <ol class="breadcrumb">
+                            <li class="breadcrumb-item"><a href="javascript:void(0)">Session</a></li>
+                            <li class="breadcrumb-item active"><a href="javascript:void(0)">Admin</a></li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- row -->
+                <div class="row">
+                    <div class="col-xl-6 col-xxl-7">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Add Session</h4>
+                            </div>
+                            <div class="card-body">
+                                <div class="basic-form">
+                                    <form method="post">
+                                        <div class="form-group">
+                                           <label>Enter Session Years</label> (e.g: 2016-20)
+                                        </div>
+                                        <div class="form-group col-6">
+                                            <input type="text" name="session" id="session" class="form-control input-rounded" placeholder="2016-20">
+                                        </div>
+                                        <div>
+                                            <div class="form-group">
+                                            <button type="submit" class="btn btn-secondary">ADD SESSION</button>
+                                        </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--**********************************
+            Content body end
+        ***********************************-->
+{%endblock%}
