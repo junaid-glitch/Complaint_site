@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 db = SQLAlchemy()
 app.config['WTF_CSRF_SECRET_KEY'] = "b'f\xfa\x8b{X\x8b\x9eM\x83l\x19\xad\x84\x08\xaa"
-app.config["SQLALCHEMY_DATABASE_URI"]="mysql+pymysql://jerry:jay4jerry2@localhost:3306/jerry"
+app.config["SQLALCHEMY_DATABASE_URI"]="mysql+pymysql://mysql username:password@localhost:3306/database_name"
 app.config['SECRET_KEY'] = "b'f\xfa\x8b{X\x8b\x9eM\x83l\x19\xad\x84\x08\xaa"
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db.init_app(app)
