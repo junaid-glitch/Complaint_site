@@ -56,7 +56,7 @@ To deploy this project run
 
 ## Contributing 🤝️
 
-Contributions are always welcome!
+Contributions are always welcomed!
 
 See `contributing.md` for ways to get started.
 
